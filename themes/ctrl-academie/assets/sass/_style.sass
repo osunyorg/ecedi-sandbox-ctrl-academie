@@ -1,0 +1,73 @@
+main
+  background: white
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  color: var(--color-primary, #{$color-primary})
+
+header
+  .primary-menu
+    .container
+      padding: 0
+    .menu
+      display: none
+    .header-button
+      display: none !important
+
+.hero
+  .content
+    padding: 0
+    .hero-text
+      margin-inline: auto
+
+.document-content
+  .block-chapter
+    .block-content
+      @include media-breakpoint-up(desktop)
+        width: columns(9)
+        margin-inline: auto
+
+  .block-call_to_action
+    border-bottom-right-radius: pxToRem(30)
+    background-color: $color-secondary !important
+    @include media-breakpoint-up(desktop)
+      max-width: columns(9)
+      margin-inline: auto
+
+    .block-title
+      font-size: var(--h2-size) !important
+      font-weight: 800 !important
+      text-transform: none !important
+      color: var(--color-white, #ffffff)
+      display: flex
+      align-items: center
+      gap: pxToRem(12)
+      &::before
+        content: ''
+        display: inline-block
+        width: pxToRem(31)
+        height: pxToRem(31)
+        background: url('/assets/images/arrow.svg') no-repeat center
+        background-size: contain
+        flex-shrink: 0
+    .description
+      p, a
+        font-size: var(--body-size) !important
+        font-weight: 400 !important
+
+footer#document-footer
+  padding-block: $spacing-6 $spacing-3
+  .footer-site
+    display: none
+  .container
+    padding-bottom: $spacing-3
+    + .container
+      padding-block: $spacing-3
+      margin: 0
+  .footer-legals
+    margin: 0
+  ul.nav-legal
+    display: flex
+    flex-wrap: wrap
+    gap: $spacing-2
+    li
+      margin: 0
