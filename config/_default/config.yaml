@@ -1,15 +1,2 @@
-theme:
-  - osuny
-  - ctrl-academie
+theme: ctrl-academie
 _merge: deep
-params:
-  summary:
-    position: hero
-  search:
-    active: true
-  logo:
-    header: '/assets/images/logo.svg'
-    footer: '/assets/images/logo-footer.svg'
-  home:
-    head:
-      title: site
