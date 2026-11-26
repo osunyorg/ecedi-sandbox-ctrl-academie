@@ -7,9 +7,12 @@
   border-bottom-right-radius: pxToRem(30)
   // todo
   //background-color: $color-secondary !important
-  @include media-breakpoint-up(desktop)
+  @include media-breakpoint-up(xl)
     max-width: columns(9)
     margin-inline: auto
+
+  &.block-call_to_action--accent_background
+    margin-bottom: var(--block-space-y) !important
 
   .block-title
     font-size: var(--h2-size) !important
@@ -31,3 +34,4 @@
     p, a
       font-size: var(--body-size) !important
       font-weight: 400 !important
+      line-height: var(--body-line-height)

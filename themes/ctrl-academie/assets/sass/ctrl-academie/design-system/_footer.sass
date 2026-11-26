@@ -4,14 +4,15 @@
 ////
 
 footer#document-footer
-  padding-block: $spacing-6 $spacing-3
+  padding-block: $spacing-4
+  @include media-breakpoint-up(xl)
+    padding-top: $spacing-6
   .footer-site
     display: none
   .container
     padding-bottom: $spacing-3
     + .container
-      padding-block: $spacing-3
-      margin: 0
+      padding-block: 0
   .footer-legals
     margin: 0
   ul.nav-legal
@@ -20,3 +21,9 @@ footer#document-footer
     gap: $spacing-2
     li
       margin: 0
+      font-weight: 600
+  .footer-credit
+    margin-top: $spacing-2
+.footer-after-end
+  font-weight: 500
+  padding-block: $spacing-4
