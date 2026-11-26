@@ -1,0 +1,22 @@
+////
+/// Ctrl-academie theme
+/// @file Block - Definition.
+////
+
+.block-definitions
+  @include in-page-without-sidebar
+    .definitions
+      @include media-breakpoint-up(xl)
+        max-width: columns(8)
+        margin-left: auto
+      details
+        .definition-content
+          margin-left: 0
+          padding-left: 0
+          padding-block: $spacing-3 $spacing-4
+
+  details
+    summary
+      padding-block: pxToRem(20)
+      //color: var(--color-accent)
+      font-weight: 800
