@@ -11,3 +11,15 @@ params:
   home:
     head:
       title: site
+
+  # COMPONENTS
+  components:
+    lightbox:
+      disabled: true
+
+  image_size:
+    blocks:
+      image:
+        mobile: 480
+        tablet: 768
+        desktop: 1440

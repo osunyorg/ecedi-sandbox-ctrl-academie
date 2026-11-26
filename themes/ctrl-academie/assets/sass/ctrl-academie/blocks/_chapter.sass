@@ -8,3 +8,30 @@
     @include media-breakpoint-up(desktop)
       width: columns(9)
       margin-inline: auto
+
+  // Todo add custom class
+  &.block-class-floating-on-img
+    &.block-chapter--accent_background
+      position: relative
+      max-width: pxToRem(532)
+      margin-top: pxToRem(-24)
+      margin-left: auto
+      margin-right: calc(2 * var(--grid-gutter))
+      padding: $spacing-3 !important
+      z-index: 1
+      border-bottom-right-radius: pxToRem(30)
+      @include media-breakpoint-up(sm)
+        margin-top: pxToRem(-48)
+        padding: $spacing-4 !important
+      @include media-breakpoint-up(md)
+        margin-top: pxToRem(-100)
+
+      .block.block-image:has(+ &)
+        margin-bottom: 0
+
+      .container
+        padding-inline: 0
+      .block-content
+        width: unset
+      a
+        @extend .button
