@@ -1,31 +1,20 @@
 ---
 title: Menu principal
 items:
-- title: Fichiers
-  slug: fichiers
-  target: "/fichiers/"
-  kind: page
+- title: Découvrir le catalogue
+  slug: decouvrir-le-catalogue
+  target: "/media/download/eyJfcmFpbHMiOnsiZGF0YSI6IjE1NzE5ZDZkLWY0NGMtNGExNy1iODM1LTM3Y2ZlZDAzZTI0ZCIsInB1ciI6ImJsb2JfaWQifX0=--46aa5ab1f20c2e01fae812162de62178aa1fa0a8"
+  kind: url
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/files"
-  file: content/fr/files/_index.html
-- title: Personnes
-  slug: personnes
-  target: "/personnes/"
-  kind: page
+  html_class: menu-class-button menu-class-button-download
+- title: Nous contacter
+  slug: nous-contacter
+  target: "/todo-contact"
+  kind: url
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/persons"
-  file: content/fr/persons/_index.html
-- title: Organisations
-  slug: organisations
-  target: "/organisations/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/organizations"
-  file: content/fr/organizations/_index.html
+  html_class: menu-class-button-contact menu-class-button-reversed
 
