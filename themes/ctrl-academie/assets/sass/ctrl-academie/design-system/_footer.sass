@@ -24,6 +24,17 @@ footer#document-footer
       font-weight: 600
   .footer-credit
     margin-top: $spacing-2
+
 .footer-after-end
   font-weight: 500
   padding-block: $spacing-4
+  > .container
+    @include media-breakpoint-up(sm)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: $spacing-4
+
+  img
+    @include media-breakpoint-down(sm)
+      margin-top: $spacing-2

@@ -15,7 +15,7 @@ $btn-border-radius: 0 0 pxToRem(14) 0
 // Style global
 $btn-background: $color-text
 $btn-color: $color-background
-$btn-border: 1px solid $color-background
+$btn-border: 1px solid $btn-background
 
 // Hover global
 $btn-hover-background: $color-background
@@ -25,17 +25,18 @@ $btn-hover-border: 1px solid $color-text
 //// HEADER
 // Layout
 $header-background: none
-$header-sticky-background: none
+$header-sticky-background: $color-background
 $header-border-bottom-width: 0
 $hero-background-color: none
 $footer-background-color: none
 
 // Menu
-$header-nav-padding-y: 0
-$header-nav-padding-y-desktop: 0
+$header-nav-padding-y: pxToRem(10)
+$header-nav-padding-y-desktop: pxToRem(16)
 
 // logo
-$header-logo-height: pxToRem(188)
+$header-logo-height: pxToRem(100)
+$header-logo-height-desktop: pxToRem(188)
 
 
 //// FOOTER

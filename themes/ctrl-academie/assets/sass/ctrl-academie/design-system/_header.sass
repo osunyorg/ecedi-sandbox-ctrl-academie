@@ -3,12 +3,47 @@
 /// @file Design-system - Header.
 ////
 
-header
+header#document-header
+  html.is-scrolling-down:not(.has-menu-opened, .has-modal-opened) &
+    @include media-breakpoint-down(desktop)
+      transform: translateY(-#{$header-logo-height})
+    @include media-breakpoint-up(desktop)
+      &:not(:hover, :focus-within)
+        transform: translateY(-#{$header-logo-height-desktop})
+
+  .logo
+    position: absolute
+    top: 0
+    left: 0
+
   .primary-menu
-    .container
-      padding: 0
-      width: auto
-    .menu
-      display: none
-    .header-button
-      display: none !important
+    > .container
+        justify-content: flex-end
+        align-items: flex-start
+
+    .nav-level-1
+      gap: pxToRem(16)
+      @include media-breakpoint-down(desktop)
+        margin-block: pxToRem(32)
+        display: flex
+        flex-direction: column
+      & > li:not(:last-child)
+        border-bottom: none
+
+      .menu-class-download
+        a
+          @include button
+          @include button-icon(download-line)
+
+      .menu-class-contact
+        a
+          @include button-reversed
+          @include button-icon(mail-fill)
+          --btn-border: #{$btn-border-width} solid var(--btn-color)
+
+      .menu-class-download,
+      .menu-class-contact
+        a
+          padding: pxToRem(9) pxToRem(16) !important
+          min-width: unset
+
