@@ -16,5 +16,5 @@ items:
   new_tab: false
   children: []
   descendants_targets: []
-  html_class: menu-class-button-contact menu-class-button-reversed
+  html_class: menu-class-icon menu-class-icon-mail-fill menu-class-button-reversed
 
