@@ -1,0 +1,16 @@
+////
+/// Ctrl-academie theme
+/// @file Block - Files.
+////
+
+.block
+  &.block-files
+    &:not(.block-titled)
+      margin-top: $spacing-3
+      .block:has(+ &)
+        margin-bottom: 0
+
+    .files--grid
+      justify-items: end
+      > :last-child
+        grid-column-end: -1

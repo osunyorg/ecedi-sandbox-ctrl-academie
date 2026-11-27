@@ -1,0 +1,18 @@
+////
+/// Ctrl-academie theme
+/// @file Block - Features.
+////
+
+.block-features
+  &.block-features--grid
+    .features
+      gap: pxToRem(2) !important
+      .feature
+        background-color: #F4EBF7
+        padding: $spacing-3
+        border-bottom-right-radius: pxToRem(30)
+        &-content
+          .name
+            color: var(--color-accent)
+        &-description
+          @extend .rich-text
