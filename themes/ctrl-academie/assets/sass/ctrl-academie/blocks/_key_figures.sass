@@ -1,0 +1,29 @@
+////
+/// Ctrl-academie theme
+/// @file Block - Key-figures.
+////
+
+.block.block-key_figures
+  padding-block: $spacing-5
+  background-color: var(--Violet-secondaire, #AD41E2)
+  color: #fff
+
+  li
+    &.with-image
+      @include media-breakpoint-down(md)
+        display: block
+
+  .key-figure-text
+    max-width: pxToRem(250)
+    margin-inline: auto
+    text-align: center
+    font-weight: 800
+    > span
+      font-size: $block-key_figures-number-font-size
+
+  img
+    margin-inline: auto
+    margin-bottom: $spacing-2
+    @include media-breakpoint-up(md)
+      margin-bottom: $spacing-3
+
