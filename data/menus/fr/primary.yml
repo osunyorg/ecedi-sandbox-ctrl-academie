@@ -8,7 +8,7 @@ items:
   new_tab: false
   children: []
   descendants_targets: []
-  html_class: menu-class-button menu-class-button-download
+  html_class: menu-class-download
 - title: Nous contacter
   slug: nous-contacter
   target: "/todo-contact"
@@ -16,5 +16,5 @@ items:
   new_tab: false
   children: []
   descendants_targets: []
-  html_class: menu-class-icon menu-class-icon-mail-fill menu-class-button-reversed
+  html_class: menu-class-contact
 
