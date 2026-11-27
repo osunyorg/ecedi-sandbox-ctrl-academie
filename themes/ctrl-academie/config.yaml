@@ -18,6 +18,11 @@ params:
       disabled: true
 
   image_size:
+    _default:
+      hero:
+        mobile:   400
+        tablet:   800
+        desktop:  1440
     blocks:
       image:
         mobile: 480
