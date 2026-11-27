@@ -4,49 +4,61 @@
 ////
 
 .block-call_to_action
-  .call_to_action
-    .description
-      p, a
-        font-size: var(--body-size) !important
-        font-weight: 400 !important
-        line-height: var(--body-line-height)
-    figure
-      @include media-breakpoint-down(desktop)
-        order: 2
-        margin-block: $spacing-3 0
-      img
-        width: unset // Avoid force width 100%
-  //
-  //.call_to_action--with-image
-  //   > *
-  //     @include media-breakpoint-down(desktop)
-  //       order: 1
-
   @include in-page-with-or-without-sidebar
     .block-title
       @include h2
 
-  &.block-call_to_action--no_background
-    border-bottom-right-radius: pxToRem(30)
+  // Accent variation
+  &.block-call_to_action--accent_background
+    .block-title
+      color: inherit
+      font-size: var(--h3-size) !important
+      line-height: var(--h3-line-height) !important
+      &::before
+        content: none
+    .description
+      p
+        @include title-arrow
+          background: url('/assets/images/arrow-accent.svg') no-repeat center
 
-    body.full-width &,
-      .call_to_action,
-      .block-content
-        padding-block: 0 !important
+  // Accent in container variation
+  &.block-call_to_action--accent_background.block-class-in-container
+    background-color: unset
+    .block-content
+      background-color: var(--color-accent)
+      border-radius: 0 0 pxToRem(30) 0
+      padding-inline: var(--grid-gutter)
+      @include media-breakpoint-up(desktop)
+        margin-inline: 0
+    .top
+      @include media-breakpoint-up(desktop)
+        padding-left: $spacing-6
+    .block-title
+      text-wrap: balance
+
+  // No variation
+  &.block-call_to_action--no_background
+    .call_to_action,
+    .block-content
+      padding-block: 0 !important
+    .call_to_action
       .block-title
         @include media-breakpoint-up(xl)
           margin-bottom: $spacing-4
+      figure
+        justify-content: flex-end
+        @include media-breakpoint-down(desktop)
+          order: 2
+          margin-block: $spacing-3 0
+        img
+          width: unset // Avoid force width 100%
+      .description
+        p, a
+          font-size: var(--body-size) !important
+          font-weight: 400 !important
+          line-height: var(--body-line-height)
+    body.full-width &
       .description,
       .actions
         @include media-breakpoint-up(xl)
           margin-left: $spacing-6
-      figure
-        justify-content: flex-end
-
-  &.block-call_to_action--accent_background
-    margin-bottom: var(--block-space-y) !important
-    @include media-breakpoint-up(xl)
-      max-width: columns(9)
-      margin-inline: auto
-    .block-title
-      color: inherit

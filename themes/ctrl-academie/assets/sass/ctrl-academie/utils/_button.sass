@@ -8,3 +8,14 @@
   --btn-border: #{$btn-border-width} solid var(--btn-color)
   --btn-hover-color: #{$color-accent}
   --btn-hover-background: #{$color-background}
+
+@mixin block-button-icon($icon)
+  a,
+  a[target='blank']
+    &:not(.icon)
+      @include button-icon($icon)
+      gap: 0
+      min-width: unset
+      &:after
+        margin-left: 0.5rem
+        font-size: 1em
